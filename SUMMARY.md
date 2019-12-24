@@ -6,7 +6,7 @@
 ## Primeiros Passos com Go
 
 -   [Instalação do Go](primeiros-passos-com-go/instalacao-do-go.md)
--   [Olá, mundo](primeiros-passos-com-go/hello-world.md)
+-   [Olá, mundo](primeiros-passos-com-go/ola-mundo.md)
 -   [Inteiros](primeiros-passos-com-go/inteiros.md)
 -   [Iteração](primeiros-passos-com-go/iteracao.md)
 -   [Arrays e slices](primeiros-passos-com-go/arrays-e-slices.md)
@@ -15,7 +15,7 @@
 -   [Maps](primeiros-passos-com-go/maps.md)
 -   [Injeção de dependência](primeiros-passos-com-go/dependency-injection.md)
 -   [Mocking](primeiros-passos-com-go/mocks.md)
--   [Concorrência](primeiros-passos-com-go/concurrency.md)
+-   [Concorrência](primeiros-passos-com-go/concorrencia.md)
 -   [Select](primeiros-passos-com-go/select.md)
 -   [Reflection](primeiros-passos-com-go/reflection.md)
 -   [Sync](primeiros-passos-com-go/sync.md)

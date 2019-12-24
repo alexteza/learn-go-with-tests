@@ -8,6 +8,8 @@ Para propósitos de demonstração, vamos te mostrar o procedimento de instalaç
 
 ## Instalação
 
+### Mac OSX
+
 O processo de instalação é bem simples. Primeiro, o que você precisa fazer é executar o comando abaixo pra instalar o homebrew (brew). O Brew depende do Xcode, então você deve se certificar de instalá-lo primeiro.
 
 ```bash
@@ -34,6 +36,60 @@ Você pode verificar a instalação com:
 $ go version
 go version go1.10 darwin/amd64
 ```
+
+### Linux
+
+O processo de instalação é bem simples. Primeiro você precisa escolher e baixar a versão do Go que você deseja instalar. Para isso [acesse o site oficial](https://golang.org/) da linguagem e copie o da versão desejada (Ex.: [https://dl.google.com/go/go1.13.linux-amd64.tar.gz](https://dl.google.com/go/go1.13.linux-amd64.tar.gz)). Recomendamos instalar sempre a versão mais atual.
+
+Para baixá-lo execute o seguinte comando no seu terminal.
+
+```bash
+# selecione a versão  que você deseja instalar, no nosso exemplo estamos utilizando a versão 1.13
+VERSAO_GO=1.13
+cd ~
+curl -O "https://dl.google.com/go/go${VERSAO_GO}.linux-amd64.tar.gz"
+```
+
+Agora descompacte os arquivos com o seguinte comando.
+
+```bash
+tar xvf "go${VERSAO_GO}.linux-amd64.tar.gz"
+```
+
+E em seguida, mova os arquivos para o diretório de binário do seu usuário.
+
+```bash
+sudo mv go /usr/local
+```
+
+Agora teste a sua instalação.
+
+```bash
+go version
+go version go1.13 linux/amd64
+```
+
+### Windows
+
+Para usuários de Windows existem duas formas de instalação, através de um arquivo ZIP que requer que você configure algumas variáveis de ambiente ou uma arquivo MSI que faz toda a configuração automaticamente.
+Primeiro faça download da versão que você deseja instalar. Para isso [acesse o site oficial](https://golang.org/) da linguagem e copie o arquivo da versão desejada (Ex.: [https://dl.google.com/go/go1.13.1.windows-amd64.msi](https://dl.google.com/go/go1.13.1.windows-amd64.msi)). Recomendamos instalar sempre a versão mais atual.
+
+#### Instalação via MSI
+
+Abra o arquivo MSI e siga os passos da instalação. Por padrão o instalador adiciona o Go na pasta `C:\Go`.
+
+O instalador adiciona o caminho `C:\Go\bin` na variável de ambiente "Path" e cria a variável de usuário "GOPATH" com o caminho `C:\Users\%USER%\go`.
+
+#### Instalação via ZIP
+
+Extraia os arquivos do arquivo ZIP no diretório de sua preferência.
+
+Adicione na variável de ambiente "Path" o caminho para a pasta "bin" dos arquivos de Go.
+Na busca do menu Iniciar, digite "Variáveis" escolha a opção "Editar as variáveis de ambiente do sistema. Na aba "Avançado" clique em "Variáveis de Ambiente", localize a variável "Path" e clique em Editar > Novo e preencha com o caminho escolhido (Ex: `C:/minha-pasta-go/bin`).
+
+Quando ocorre alteração nas variáveis de ambiente no Windows é necessário reiniciar o sistema.
+
+Nos próximos passos vamos configurar o ambiente Go. As [instruções abaixo](#o-ambiente-go) valem tanto para sistema operacional OSX quanto para o Linux. O ambiente Windows pode requisitar configurações a mais e por isso é importante seguir a documentação oficial.
 
 ## O Ambiente Go
 

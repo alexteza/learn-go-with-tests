@@ -6,7 +6,7 @@ docker run -v `pwd`:/source jagregory/pandoc -o aprenda-go-com-testes.pdf --late
     gb-readme.md \
     meta/motivacao.md \
     primeiros-passos-com-go/instalacao-do-go.md \
-    primeiros-passos-com-go/hello-world.md \
+    primeiros-passos-com-go/ola-mundo.md \
     primeiros-passos-com-go/inteiros.md \
     primeiros-passos-com-go/iteracao.md \
     primeiros-passos-com-go/arrays-e-slices.md \
@@ -15,7 +15,7 @@ docker run -v `pwd`:/source jagregory/pandoc -o aprenda-go-com-testes.pdf --late
     primeiros-passos-com-go/maps.md \
     primeiros-passos-com-go/injecao-de-dependencia.md \
     primeiros-passos-com-go/mocks.md \
-    primeiros-passos-com-go/concurrency.md \
+    primeiros-passos-com-go/concorrencia.md \
     primeiros-passos-com-go/select.md \
     primeiros-passos-com-go/reflection.md \
     primeiros-passos-com-go/sync.md \
@@ -34,7 +34,7 @@ docker run -v `pwd`:/source jagregory/pandoc -o aprenda-go-com-testes.epub --lat
     gb-readme.md \
     meta/motivacao.md \
     primeiros-passos-com-go/instalacao-do-go.md \
-    primeiros-passos-com-go/hello-world.md \
+    primeiros-passos-com-go/ola-mundo.md \
     primeiros-passos-com-go/inteiros.md \
     primeiros-passos-com-go/iteracao.md \
     primeiros-passos-com-go/arrays-e-slices.md \
@@ -43,7 +43,7 @@ docker run -v `pwd`:/source jagregory/pandoc -o aprenda-go-com-testes.epub --lat
     primeiros-passos-com-go/maps.md \
     primeiros-passos-com-go/injecao-de-dependencia.md \
     primeiros-passos-com-go/mocks.md \
-    primeiros-passos-com-go/concurrency.md \
+    primeiros-passos-com-go/concorrencia.md \
     primeiros-passos-com-go/select.md \
     primeiros-passos-com-go/reflection.md \
     primeiros-passos-com-go/sync.md \

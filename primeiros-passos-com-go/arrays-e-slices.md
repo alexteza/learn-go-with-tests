@@ -24,7 +24,7 @@ func TestSoma(t *testing.T) {
     resultado := Soma(numeros)
     esperado := 15
 
-    if esperado != recebido {
+    if esperado != resultado {
         t.Errorf("resultado %d, esperado %d, dado %v", resultado, esperado, numeros)
     }
 }
@@ -114,7 +114,7 @@ func TestSoma(t *testing.T) {
         resultado := Soma(numeros)
         esperado := 15
 
-        if resultado != want {
+        if resultado != esperado {
             t.Errorf("resultado %d, want %d, dado %v", resultado, esperado, numeros)
         }
     })
@@ -125,7 +125,7 @@ func TestSoma(t *testing.T) {
         resultado := Soma(numeros)
         esperado := 6
 
-        if resultado != want {
+        if resultado != esperado {
             t.Errorf("resultado %d, esperado %d, dado %v", resultado, esperado, numeros)
         }
     })
@@ -201,7 +201,7 @@ func TestSoma(t *testing.T) {
 
 É importante questionar o valor dos seus testes. Ter o máximo de testes possível não deve ser o objetivo e sim ter o máximo de _confiança_ possível na sua base de código. Ter testes demais pode se tornar um problema real e só adiciona mais peso na manutenção. **Todo teste tem um custo**.
 
-No nosso caso, dá para perceber que ter dois testes para essa função é redundância. Se funciona para um soice de determindo tamanho, é muito provável que funciona para um slice de qualquer tamanho (dentro desse escopo).
+No nosso caso, dá para perceber que ter dois testes para essa função é redundância. Se funciona para um slice de determindo tamanho, é muito provável que funciona para um slice de qualquer tamanho (dentro desse escopo).
 
 A ferramenta de testes nativa do Go tem a funcionalidade de [cobertura de código](https://blog.golang.org/cover) que te ajuda a identificar áreas do seu código que você não cobriu. Já adianto que ter 100% de cobertura não deve ser seu objetivo; é apenas uma ferramenta para te dar uma ideia da sua cobertura. De qualquer forma, se você aplicar o TDD, é bem provável que chegue bem perto dos 100% de cobertura.
 
@@ -305,16 +305,16 @@ Volte o teste da forma como estava e execute-o. Você deve ter a saída do teste
 O que precisamos fazer é percorrer as variáveis recebidas como argumento, calcular a soma com nossa função `Soma` de antes e adicioná-la ao slice que vamos retornar:
 
 ```go
-func SomaTudo(numerosParaSomar ...[]int) []int {
+func SomaTudo(numerosParaSomar ...[]int) (somas []int) {
     quantidadeDeNumeros := len(numerosParaSomar)
-    somas := make([]int, quantidadeDeNumeros)
+    somas = make([]int, quantidadeDeNumeros)
 
     for i, numeros := range numerosParaSomar {
         somas[i] = Soma(numeros)
     }
 
-    return somas
-}
+    return
+ }
 ```
 
 Muitas coisas novas para aprender!
